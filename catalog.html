@@ -6,36 +6,41 @@
 </head>
 <body>
 	<header>
-		<nav>
+		<div>
 			<a href="index.html">
 				<img src="https://via.placeholder.com/163x35" alt='Логотип интернет-магазина "Девайс"'>
 			</a>
 
-			<input type="text" name="search" id="search" placeholder="Поиск по сайту">  
+			<form action="https://echo.htmlacademy.ru/" method="get">
+				<input type="text" name="search" id="search" placeholder="Поиск по сайту">  
+				<button type="submit">Найти</button>
+			</form>
 
-			<section class="options">
+			<div class="options">
 				<a href="blank.html">Валентин Петухов</a>
 				<a href="blank.html">Выйти</a>
 				<a href="blank.html">Сравнить</a>
 				<a href="blank.html">Корзина</a>
-			</section>
-
-			<ul>
-				<li><a href="catalog.html">Каталог товаров</a></li>
-				<li><a href="blank.html">Доставка</a></li>
-				<li><a href="blank.html">Гарантия</a></li>
-				<li><a href="blank.html">Контакты</a></li>
-			</ul>
-			</nav>
+      </div>
+    </div>
+		<nav>
+      <ul>
+        <li><a href="catalog.html">Каталог товаров</a></li>
+        <li><a href="blank.html">Доставка</a></li>
+        <li><a href="blank.html">Гарантия</a></li>
+        <li><a href="blank.html">Контакты</a></li>
+      </ul>
+    </nav>
 	</header>
 
 	<main>
 		<h1>Моноподы для селфи</h1>
-		<p>
-			<a href="index.html">Главная </a> >
-			<a href="catalog.html"> Каталог товаров </a> > 
-			Моноподы для селфи
-		</p>
+
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="catalog.html">Каталог товаров</a></li>
+			<li>Моноподы для селфи</li>
+		</ul>
 
 		<section>
 			<h2>Цвет</h2>
@@ -61,17 +66,15 @@
 					<label for="checkbox-pink">Розовый</label>
 				</li>
 			</ul>
-		</section>
-
-		<section>
+		
 			<h2>Bluetooth</h2>
 			<ul>
 				<li>
-					<input type="radio" name="yes" id="radio-yes">
+					<input type="radio" value="yes" name="bluetooth" id="radio-yes">
 					<label for="radio-yes">Есть</label>
 				</li>
 				<li>
-					<input type="radio" name="no" id="radio-no">
+					<input type="radio" value="no" name="bluetooth" id="radio-no">
 					<label for="radio-no">Нет</label>
 				</li>
 			</ul>
@@ -82,38 +85,32 @@
 		<section>
 			<ul>
 				<li>
-					<figure>
-						<img src="https://via.placeholder.com/360x380" alt="Любительская селфи-палка">
-						<figcaption>
-							Любительская селфи-палка <span>500 руб.</span>
-						</figcaption>
-					</figure>
+          <article>
+            <img src="https://via.placeholder.com/360x380" alt="Любительская селфи-палка">
+            <h3>Любительская селфи-палка <span>500 руб.</span></h3>
+          </article>
 				</li>
 				<li>
-					<figure>
-						<img src="https://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
-						<figcaption>
-							Профессиональная селфи-палка <span>1 500 руб.</span>
-						</figcaption>
-					</figure>
+          <article>
+            <img src="https://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
+            <h3>Профессиональная селфи-палка <span>1 500 руб.</span></h3>
+          </article>
 				</li>
 				<li>
-					<figure>
-						<img src="https://via.placeholder.com/360x380" alt="Непотопляемая селфи-палка">
-						<figcaption>
-							Непотопляемая селфи-палка <span>2 500 руб.</span>
-						</figcaption>
-					</figure>
+          <article>
+            <img src="https://via.placeholder.com/360x380" alt="Непотопляемая селфи-палка">
+            <h3>Непотопляемая селфи-палка <span>2 500 руб.</span></h3>
+          </article>
 				</li>
 				<li>
-					<figure>
-						<img src="https://via.placeholder.com/360x380" alt="">
-						<figcaption>
-							Селфи-палка &laquo;Следуй за мной&raquo; <span>4 900 руб</span>
-						</figcaption>
-					</figure>
+          <article>
+            <img src="https://via.placeholder.com/360x380" alt="Селфи-палка 'Следуй за мной'">
+            <h3>Селфи-палка &laquo;Следуй за мной&raquo; <span>4 900 руб</span></h3>
+          </article>
 				</li>
-			</ul>
+      </ul>
+      
+
 		</section>
 	</main>
 
@@ -122,12 +119,12 @@
 			<img src="https://via.placeholder.com/163x35" alt='Логотип интернет-магазина "Девайс"'>
 		</a>  
 
-		<section class="options">
+		<div class="options">
 			<a href="blank.html">Валентин Петухов</a>
 			<a href="blank.html">Выйти</a>
 			<a href="blank.html">Сравнить</a>
 			<a href="blank.html">Корзина</a>
-		</section>
+		</div>
 
 		<p>г. Москва, ул. Строителей, 15</p>
 
@@ -139,8 +136,6 @@
 
 		<p>Тел.: +7 (495) 495-95-95</p>
 
-		<img src="https://via.placeholder.com/80x7" alt='Какая-то полоска'>
-		
 		<ul>
 			<li><a href="blank.html"><img src="https://via.placeholder.com/32x32" alt="Наша страница на Facebook"></a></li>
 			<li><a href="blank.html"><img src="https://via.placeholder.com/32x32" alt="Наша страница в Instagram"></a></li>
