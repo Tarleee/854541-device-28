@@ -22,6 +22,7 @@
           <a href="blank.html">Корзина</a>
         </div>
       </div>
+
       <nav>
         <ul>
           <li><a href="catalog.html">Каталог товаров</a></li>
@@ -30,9 +31,19 @@
           <li><a href="blank.html">Контакты</a></li>
         </ul>
       </nav>
+
+      <ul>
+        <li><a href="blank.html">Виртуальная реальность</a></li>
+        <li><a href="blank.html">Моноподы для селфи</a></li>
+        <li><a href="blank.html">Экшн-камеры</a></li>
+        <li><a href="blank.html">Фитнес-браслеты</a></li>
+        <li><a href="blank.html">Умные часы</a></li>
+        <li><a href="blank.html">Квадрокоптер</a></li>
+      </ul>
     </header>
 
     <main>
+      <h1 class="visually-hidden">Интернет-магазин "Device"</h1>
       <div>
         <img src="img/slider-1.png" alt="палка для селфи">
         <section>
@@ -51,11 +62,52 @@
               <td>8,5 м</td>
               <td>5 кг</td>
               <td>Карбон</td>
+            </tr>
             <tr>
               <th>Длина палки</th>
               <th>Вес палки</th>
               <th>Материал</th>
             </tr>
+          </table>
+        </section>
+      </div>
+
+      <div>
+        <img src="img/slider-2.png" alt="Фитнес-браслет">
+        <section>
+          <h2>Худеем правильно!</h2>
+          <p>
+            Мотивирующие фитнес-браслеты помогут найти в себе силы <br>
+            не пропускать занятия и соблюдать диету.
+          </p>
+          <a href="blank.html">Подробнее</a>
+          <table>
+            <tr>
+              <td>48 часов</td>
+            </tr>
+            <tr>
+              <th>Без подзарядки</th>
+            </tr>
+          </table>
+        </section>
+      </div>
+      <div>
+        <img src="img/slider-3.png" alt="Квадрокоптер">
+        <section>
+          <h2>Порхает как бабочка, жалит как пчела!</h2>
+          <p>
+            Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
+            мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <a href="blank.html">Подробнее</a>
+          <table>
+            <tr>
+              <td>800 м</td>
+              <td>50 м</td>
+            </tr>
+            <tr>
+              <th>Дальность полета</th>
+              <th>Радиус поражения</th>
             </tr>
           </table>
         </section>
@@ -77,11 +129,13 @@
       </ul>
 
       <section>
+        <h2 class="visually-hidden">Сервис:</h2>
         <ul>
           <li>Доставка</li>
           <li>Гарантия</li>
           <li>Кредит</li>
         </ul>
+
         <section>
           <h2>Доставка</h2>
           <p>
@@ -90,6 +144,24 @@
             заработаем, поднимая его на ваш этаж.
           </p>
         </section>
+
+        <section>
+          <h2>Гарантия</h2>
+          <p>
+            Если из-за возгорания купленного у нас товара у вас сгорит дом - <br>
+            не переживайте, мы выдадим вам новый. <br>
+            Товар, не дом, конечно же.
+          </p>
+        </section>
+        <section>
+          <h2>Кредит</h2>
+          <p>
+            Залезть в долговую яму стало проще! Кредитные консультанты <br>
+            подберут для вас наиболее выгодные <br>
+            условия кредита. Выгодные для нашего банка, разумеется.
+          </p>
+        </section>
+
       </section>
 
       <ul>
@@ -162,6 +234,23 @@
       </a>
 
     </footer>
+
+    <img src="img/map-popup.png" alt="улица Строителей, 15">
+
+    <div>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="message-name">Ваше имя: <br></label>
+        <input type="text" name="name" id="message-name" placeholder="Имя Фамилия"><br>
+        <label for="message-email">Ваш e-mail: <br></label>
+        <input type="text" name="email" id="message-email" placeholder="email@example.com"><br>
+        <label for="message-text">Текст письма: <br></label>
+        <textarea name="user-message" id="message-text" cols="80" rows="10" placeholder="В свободной форме">
+
+        </textarea> <br>
+        <button type="submit">Отправить</button> <br>
+      </form>
+      <button type="button">Закрыть</button>
+    </div>
   </body>
 </html>
 

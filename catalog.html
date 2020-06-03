@@ -31,6 +31,15 @@
         <li><a href="blank.html">Контакты</a></li>
       </ul>
     </nav>
+
+    <ul>
+      <li><a href="blank.html">Виртуальная реальность</a></li>
+      <li><a href="blank.html">Моноподы для селфи</a></li>
+      <li><a href="blank.html">Экшн-камеры</a></li>
+      <li><a href="blank.html">Фитнес-браслеты</a></li>
+      <li><a href="blank.html">Умные часы</a></li>
+      <li><a href="blank.html">Квадрокоптер</a></li>
+    </ul>
 	</header>
 
 	<main>
@@ -44,47 +53,57 @@
 
 		<section>
       <h2>Фильтр:</h2>
-
-      <h3>Стоимость</h3>
-      <input type="range" name="price" min="0" max="9000">
-
-			<h3>Цвет</h3>
-			<ul>
-				<li>
-					<input type="checkbox" name="black" id="checkbox-black">
-					<label for="checkbox-black">Чёрный</label>
-				</li>
-				<li>
-					<input type="checkbox" name="white" id="checkbox-white">
-					<label for="checkbox-white">Белый</label>
-				</li>
-				<li>
-					<input type="checkbox" name="blue" id="checkbox-blue">
-					<label for="checkbox-blue">Синий</label>
-				</li>
-				<li>
-					<input type="checkbox" name="red" id="checkbox-red">
-					<label for="checkbox-red">Красный</label>
-				</li>
-				<li>
-					<input type="checkbox" name="pink" id="checkbox-pink">
-					<label for="checkbox-pink">Розовый</label>
-				</li>
-			</ul>
-		
-			<h3>Bluetooth</h3>
-			<ul>
-				<li>
-					<input type="radio" value="yes" name="bluetooth" id="radio-yes">
-					<label for="radio-yes">Есть</label>
-				</li>
-				<li>
-					<input type="radio" value="no" name="bluetooth" id="radio-no">
-					<label for="radio-no">Нет</label>
-				</li>
-      </ul>
       
-      <button type="submit">Показать</button>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Стоимость</legend>
+          <input type="range" name="price" min="0" max="9000">
+        </fieldset>
+        
+        <fieldset>
+          <legend>Цвет</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="black" id="checkbox-black">
+              <label for="checkbox-black">Чёрный</label>
+            </li>
+            <li>
+              <input type="checkbox" name="white" id="checkbox-white">
+              <label for="checkbox-white">Белый</label>
+            </li>
+            <li>
+              <input type="checkbox" name="blue" id="checkbox-blue">
+              <label for="checkbox-blue">Синий</label>
+            </li>
+            <li>
+              <input type="checkbox" name="red" id="checkbox-red">
+              <label for="checkbox-red">Красный</label>
+            </li>
+            <li>
+              <input type="checkbox" name="pink" id="checkbox-pink">
+              <label for="checkbox-pink">Розовый</label>
+            </li>
+          </ul>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Bluetooth</legend>
+          <ul>
+            <li>
+              <input type="radio" value="yes" name="bluetooth" id="radio-yes">
+              <label for="radio-yes">Есть</label>
+            </li>
+            <li>
+              <input type="radio" value="no" name="bluetooth" id="radio-no">
+              <label for="radio-no">Нет</label>
+            </li>
+          </ul>
+        </fieldset>
+        
+        <button type="submit">Показать</button>
+      </form>
+      
+      
     </section>
     
     <section>
@@ -97,6 +116,7 @@
     </section>
 
 		<section>
+			<h2 class="visually-hidden">Каталог</h2>
 			<ul>
 				<li>
           <article>
