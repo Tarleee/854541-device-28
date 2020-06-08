@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Каталог товаров</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
@@ -23,11 +25,12 @@
 				<a href="blank.html">Корзина</a>
       </div>
     </div>
-    <nav>
-      <ul>
-        <li>
+    
+    <nav class="main-navigation">
+      <ul class="main-navigation-list">
+        <li class="catalog">
           <a href="catalog.html">Каталог товаров</a>
-          <ul>
+          <ul class="catalog-menu">
             <li><a href="blank.html">Виртуальная реальность</a></li>
             <li><a href="blank.html">Моноподы для селфи</a></li>
             <li><a href="blank.html">Экшн-камеры</a></li>
@@ -58,7 +61,8 @@
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Стоимость</legend>
-          <input type="range" name="price" min="0" max="9000">
+          <input type="range" class="filter-price" id="filter-price" name="price" min="0" max="9000">
+          <label for="filter-price">Стоимость от и до</label>
         </fieldset>
         
         <fieldset>
