@@ -608,6 +608,48 @@ h1 {
     opacity: 1;
 }
 
+.catalog-sort-types .a-z {
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+
+    background-color: var(--basic-grey-light);
+    background-image: url(../img/icon-up-dir.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    opacity: 0.2;
+    
+}
+
+.catalog-sort-types .z-a {
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    
+    background-color: var(--basic-grey-light);
+    background-image: url(../img/icon-up-dir.svg);
+    background-repeat: no-repeat;
+    background-position: 1px 0;
+    border: none;
+    transform: rotate(180deg);
+}
+
+.catalog-sort-types .a-z:hover,
+.catalog-sort-types .z-a:hover {
+    opacity: 0.4;
+}
+
+.catalog-sort-types .a-z:active,
+.catalog-sort-types .z-a:active,
+.catalog-sort-types .a-z:focus,
+.catalog-sort-types .z-a:focus {
+    opacity: 1;
+    outline: transparent;
+}
+
 .catalog-list h3 {
     font-family: 'Gilroy', 'Arial', sans-serif;
     font-weight: 800;
