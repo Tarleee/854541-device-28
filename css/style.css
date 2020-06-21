@@ -11,7 +11,11 @@
     --special-yellow-dark: #f0c52e;
     --special-yellow: #f7e296;
     --special-green: #91c92f;
-
+    --special-half-grey: #D9D9D9;
+    --special-grey-light: #EBEBEB;
+    --special-transparent-black: rgba(0, 0, 0, 0.3);
+    
+    --filter-grey: #DCDCDC;
     --status-pink: #f6dada;
 }
 
@@ -91,7 +95,6 @@ body {
     line-height: 20px;
 
     color: var(--basic-black);
-    background-color: var(--basic-white);
     background-repeat: no-repeat;
 }
 
@@ -105,6 +108,12 @@ img {
     height: auto;
 }
 
+li {
+    list-style: none;
+}
+
+
+
 header {
     background-color: var(--special-yellow);
 }
@@ -113,8 +122,16 @@ header .options {
     line-height: 20px;
 }
 
-li {
-    list-style: none;
+.logo-device:hover,
+header a:hover,
+footer a:hover {
+    opacity: 0.6;
+}
+
+.logo-device:active,
+header a:active,
+footer a:active {
+    opacity: 0.3;
 }
 
 .main-navigation-list > li > a {
@@ -141,23 +158,33 @@ li {
     opacity: 0.3;
 }
 
+.search-input:hover {
+    opacity: 0.6;
+}
+
 .search-input + label {
     display: none;
 }
 
 .search-button {
     display: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border: 2px solid var(--basic-black);
 }
 
-.logo-device:hover,
-header a:hover {
-    opacity: 0.6;
+.search-button:hover {
+    color: var(--basic-white);
+    background-color: var(--basic-black);
 }
 
-.logo-device:active,
-header a:active {
+.search-button:active {
+    color: var(--basic-white);
     opacity: 0.3;
+    background-color: var(--basic-black);
 }
+
+
 
 .slider-wrapper h2 {
     font-family: 'Gilroy', 'Arial', sans-serif;
@@ -177,19 +204,21 @@ header a:active {
     line-height: 22px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    box-shadow: inset 0 7px 0 0 white,
-                inset 0 -7px 0 0 white;
-    background-color: var(--special-yellow-dark)
+
+    box-shadow: inset 0 7px 0 0 var(--basic-white),
+                inset 0 -7px 0 0 var(--basic-white);
+    background-color: var(--special-yellow-dark);
 }
 
-.slider-wrapper a:hover {
+.slider-wrapper a:hover,
+.slider-wrapper a:focus {
     box-shadow: none;
     transition: box-shadow 0.3s;
     background-color: var(--special-yellow-dark);
 }
 
 .slider-wrapper a:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--special-transparent-black);
     background-color: var(--special-yellow-dark);
 }
 
@@ -209,6 +238,14 @@ header a:active {
     letter-spacing: 0.1em;
 }
 
+.popular a {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+}
+
 .popular a::before {
     content: '';
     width: 160px;
@@ -217,6 +254,415 @@ header a:active {
     background-color: var(--special-yellow);
 }
 
+.popular-vr::before {
+    background-image: url(../img/popular-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.popular-selfie-stick::before {
+    background-image: url(../img/popular-2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.popular-action-cam::before {
+    background-image: url(../img/popular-3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.popular-fitness-tracker::before {
+    background-image: url(../img/popular-4.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.popular-smart-watch::before {
+    background-image: url(../img/popular-5.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.popular-quadcopter::before {
+    background-image: url(../img/popular-6.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-navigation {
+    border-right: 7px solid var(--basic-black);
+}
+
+.service-navigation button {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    
+    border: none;
+    box-shadow: inset 0 7px 0 0 var(--basic-white),
+                inset 0 -7px 0 0 var(--basic-white);
+    background-color: var(--special-yellow-dark);
+}
+
+.service-navigation button:hover {
+    box-shadow: none;
+    transition: box-shadow 0.3s;
+    background-color: var(--special-yellow-dark);
+}
+
+.service-navigation button:active,
+.service-navigation button:focus {
+    color: var(--special-yellow);
+    background-color: var(--basic-black);
+    box-shadow: none;
+    outline: transparent;
+}
+
+.service h2 {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
+    letter-spacing: 0.2em;
+}
+
+.service p {
+    line-height: 28px;
+    letter-spacing: 0.1em;
+}
+
+.service-delivery::after {
+    content: '';
+    display: block; /* сделал, чтобы было видно */
+    width: 136px;
+    height: 164px;
+    background-image: url(../img/delivery.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-warranty::after {
+    content: '';
+    display: block; /* сделал, чтобы было видно */
+    width: 171px;
+    height: 195px;
+    background-image: url(../img/warranty.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-credit::after {
+    content: '';
+    display: block; /* сделал, чтобы было видно */
+    width: 156px;
+    height: 188px;
+    background-image: url(../img/credit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logotypes li a {
+    width: 260px;
+    height: 100px;
+    display: block;
+    margin-top: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logotypes-dji a {
+    background-image: url(../img/logo-dji.png);
+}
+
+.logotypes-spgadgets a {
+    background-image: url(../img/logo-spgadgets.png);
+}
+
+.logotypes-gopro a {
+    background-image: url(../img/logo-gopro.png);
+}
+
+.logotypes-vive a {
+    background-image: url(../img/logo-vive.png);
+}
+
+.logotypes-dji a:hover {
+    background-image: url(../img/logo-dji-hovered.png);
+}
+
+.logotypes-spgadgets a:hover {
+    background-image: url(../img/logo-spgadgets-hovered.png);
+}
+
+.logotypes-gopro a:hover {
+    background-image: url(../img/logo-gopro-hovered.png);
+}
+
+.logotypes-vive a:hover {
+    background-image: url(../img/logo-vive-hovered.png);
+}
+
+.sections-wrapper h2{
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
+    letter-spacing: 0.2em;
+}
+
+.sections-wrapper p {
+    line-height: 28px;
+}
+
+.shipping-companies li {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.sections-wrapper a,
+.sections-wrapper button {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    border: none;
+    box-shadow: inset 0 7px 0 0 var(--basic-white),
+                inset 0 -7px 0 0 var(--basic-white);
+    background-color: var(--special-yellow-dark);
+}
+
+.sections-wrapper section > a:hover,
+.sections-wrapper section > a:focus,
+.sections-wrapper button:hover,
+.sections-wrapper button:focus {
+    box-shadow: none;
+    transition: box-shadow 0.3s;
+    background-color: var(--special-yellow-dark);
+    
+}
+
+.sections-wrapper section > a:active,
+.sections-wrapper button:active {
+    color: var(--special-transparent-black);
+    background-color: var(--special-yellow-dark);
+    outline: transparent;
+}
+
+.contacts-map {
+    background-color: var(--basic-grey-light);
+}
+
+footer {
+    background-color: var(--basic-dark);
+    color: var(--basic-white);
+}
+
+footer .options a {
+    color: var(--basic-white);
+    opacity: 0.7;
+}
+
+footer .options a:hover {
+    opacity: 1;
+}
+
+footer .options a:active {
+    opacity: 0.3;
+}
+
+footer .main-navigation-list a {
+    color: var(--basic-white);
+}
+
+footer .socials a {
+    opacity: 0.3;
+}
+
+footer .socials a:hover {
+    opacity: 0.6;
+}
+
+footer .socials a:active {
+    opacity: 0.1;
+}
+
+.modal {
+    display: none;
+}
+
+h1 {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: 47px;
+    line-height: 58px;
+}
+
+.catalog-main h2 {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.breadcrumbs li {
+    font-size: 14px;
+    line-height: 19px;
+    opacity: 0.3;
+}
+
+.breadcrumbs li a:hover {
+    opacity: 0.6;
+}
+
+.breadcrumbs li a:active {
+    opacity: 0.1;
+}
+
+.filter {
+    background-color: var(--basic-grey-light);
+}
+
+.filter label {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.filter-wrapper {
+    background-color: var(--filter-grey);
+}
+
+.filter legend {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+}
+
 .filter-price + label {
     display: none;
 }
+
+.filter button[type=submit] {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    border: none;
+    box-shadow: inset 0 7px 0 0 var(--basic-grey-light),
+                inset 0 -7px 0 0 var(--basic-grey-light);
+    background-color: var(--special-yellow-dark);
+}
+
+.filter button[type=submit]:hover,
+.filter button[type=submit]:focus {
+    box-shadow: none;
+    transition: box-shadow 0.3s;
+    background-color: var(--special-yellow-dark);
+}
+
+.filter button[type=submit]:active {
+    color: var(--special-transparent-black);
+    background-color: var(--special-yellow-dark);
+    outline: transparent;
+}
+
+.catalog-sort {
+    background-color: var(--basic-grey-light);
+}
+
+.catalog-sort-types a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    opacity: 0.3;
+}
+
+.catalog-sort-types a:hover {
+    opacity: 0.6;
+}
+
+.catalog-sort-types a:active {
+    opacity: 1;
+}
+
+.catalog-list h3 {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+}
+
+.catalog-list h3 > span {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+}
+
+.catalog-list img:hover {
+    opacity: 0.7;
+}
+
+.catalog-nav {
+    font-family: 'Gilroy';
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    
+    background-color: var(--special-grey-light);
+}
+
+.catalog-nav .page-number a {
+    opacity: 0.3;
+}
+
+.catalog-nav .page-number a:hover {
+    opacity: 0.6;
+}
+
+.catalog-nav .page-number a:active {
+    opacity: 1;
+}
+
+.catalog-nav .prev-page a:hover,
+.catalog-nav .next-page a:hover {
+    background-color: var(--special-half-grey);
+}
+
+.catalog-nav .prev-page a:active,
+.catalog-nav .next-page a:active {
+    color: var(--special-transparent-black);
+}
+
+
+
+
+
+
