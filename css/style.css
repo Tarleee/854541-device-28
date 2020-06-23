@@ -108,9 +108,9 @@ img {
     height: auto;
 }
 
-li {
+/* li {
     list-style: none;
-}
+} */
 
 
 
@@ -134,6 +134,10 @@ footer a:active {
     opacity: 0.3;
 }
 
+.main-navigation-list {
+    list-style: none;
+}
+
 .main-navigation-list > li > a {
     font-family: 'Gilroy', 'Arial', sans-serif;
     font-weight: 800;
@@ -149,6 +153,7 @@ footer a:active {
     font-size: 15px;
     line-height: 20px;
 
+    list-style: none;
     display: none;
 }
 
@@ -238,6 +243,10 @@ footer a:active {
     letter-spacing: 0.1em;
 }
 
+.popular {
+    list-style: none;
+}
+
 .popular a {
     font-family: 'Gilroy', 'Arial', sans-serif;
     font-weight: 800;
@@ -292,6 +301,7 @@ footer a:active {
 
 .service-navigation {
     border-right: 7px solid var(--basic-black);
+    list-style: none;
 }
 
 .service-navigation button {
@@ -366,6 +376,10 @@ footer a:active {
     background-image: url(../img/credit.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.logotypes {
+    list-style: none;
 }
 
 .logotypes li a {
@@ -489,6 +503,10 @@ footer .main-navigation-list a {
     color: var(--basic-white);
 }
 
+footer .socials {
+    list-style: none;
+}
+
 footer .socials a {
     opacity: 0.3;
 }
@@ -520,6 +538,10 @@ h1 {
     text-transform: uppercase;
 }
 
+.breadcrumbs {
+    list-style: none;
+}
+
 .breadcrumbs li {
     font-size: 14px;
     line-height: 19px;
@@ -536,6 +558,10 @@ h1 {
 
 .filter {
     background-color: var(--basic-grey-light);
+}
+
+.filter ul {
+    list-style: none;
 }
 
 .filter label {
@@ -591,6 +617,10 @@ h1 {
 
 .catalog-sort {
     background-color: var(--basic-grey-light);
+}
+
+.catalog-sort-types {
+    list-style: none;
 }
 
 .catalog-sort-types a {
@@ -650,6 +680,10 @@ h1 {
     outline: transparent;
 }
 
+.catalog-list {
+    list-style: none;
+}
+
 .catalog-list h3 {
     font-family: 'Gilroy', 'Arial', sans-serif;
     font-weight: 800;
@@ -671,7 +705,7 @@ h1 {
 }
 
 .catalog-nav {
-    font-family: 'Gilroy';
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 20px;
@@ -679,6 +713,7 @@ h1 {
     text-transform: uppercase;
     
     background-color: var(--special-grey-light);
+    list-style: none;
 }
 
 .catalog-nav .page-number a {
